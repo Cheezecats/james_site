@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="James - Essays" />
+    <title>James - Essays</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+          sans-serif;
+        background: white;
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .header {
+        max-width: 900px;
+        margin: 0 auto 40px;
+      }
+
+      .back-link {
+        display: inline-block;
+        color: #667eea;
+        text-decoration: none;
+        font-size: 1rem;
+        margin-bottom: 20px;
+        opacity: 0.9;
+        transition: opacity 0.3s ease;
+      }
+
+      .back-link:hover {
+        opacity: 1;
+      }
+
+      .header h1 {
+        color: #333;
+        font-size: 2.5rem;
+      }
+
+      .content {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .essay-section {
+        margin-bottom: 60px;
+      }
+
+      .essay-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .essay-header h2 {
+        color: #333;
+        font-size: 1.8rem;
+        font-weight: 600;
+      }
+
+      .pdf-link {
+        color: #667eea;
+        text-decoration: none;
+        font-size: 1.5rem;
+        padding: 8px 12px;
+        border-radius: 8px;
+        transition: background 0.3s ease;
+      }
+
+      .pdf-link:hover {
+        background: #f0f0f0;
+      }
+
+      .essay-description {
+        color: #555;
+        line-height: 1.7;
+        font-size: 1rem;
+        margin-bottom: 25px;
+        max-width: 700px;
+      }
+
+      .essay-images {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+      }
+
+      .essay-img-placeholder {
+        aspect-ratio: 16 / 9;
+        background: #f0f0f0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #999;
+        font-size: 1.5rem;
+      }
+
+      .essay-img-placeholder img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #e0e0e0;
+        margin: 50px 0;
+      }
+
+      @media (max-width: 600px) {
+        .header h1 {
+          font-size: 2rem;
+        }
+
+        .essay-header h2 {
+          font-size: 1.4rem;
+        }
+
+        .essay-description {
+          font-size: 0.95rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <a href="/" class="back-link">← Back to Home</a>
+      <h1>Essays</h1>
+    </div>
+
+    <div class="content">
+      <section class="essay-section">
+        <div class="essay-header">
+          <h2>LLM Hallucinations</h2>
+          <a href="essay1.pdf" class="pdf-link" title="Download PDF">📄</a>
+        </div>
+        <p class="essay-description">
+          An exploration of Large Language Model hallucinations - why they occur, their implications,
+          and potential mitigation strategies. This essay examines the fundamental causes of
+          hallucination in transformer architectures and discusses current research directions aimed
+          at improving factual reliability in AI systems.
+        </p>
+        <div class="essay-images">
+          <div class="essay-img-placeholder">📷 Image placeholder</div>
+          <div class="essay-img-placeholder">📷 Image placeholder</div>
+        </div>
+      </section>
+
+      <hr />
+
+      <section class="essay-section">
+        <div class="essay-header">
+          <h2>Model Architecture</h2>
+          <a href="essay2.pdf" class="pdf-link" title="Download PDF">📄</a>
+        </div>
+        <p class="essay-description">
+          A deep dive into modern model architectures, their evolution, and the design principles
+          that drive their performance. From early transformer designs to state-of-the-art
+          architectures, this essay traces the key innovations that have shaped modern AI systems.
+        </p>
+        <div class="essay-images">
+          <div class="essay-img-placeholder">📷 Image placeholder</div>
+          <div class="essay-img-placeholder">📷 Image placeholder</div>
+          <div class="essay-img-placeholder">📷 Image placeholder</div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

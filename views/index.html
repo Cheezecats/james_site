@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="James - Personal website" />
+    <title>James - Home</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+          sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 800px;
+        width: 100%;
+      }
+
+      .hero {
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 20px;
+        padding: 60px 40px;
+        text-align: center;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      .hero .subtitle {
+        font-size: 1.2rem;
+        color: #666;
+        margin-bottom: 40px;
+      }
+
+      .nav-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        margin-top: 40px;
+      }
+
+      .nav-card {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        text-decoration: none;
+        padding: 30px 20px;
+        border-radius: 15px;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+        box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+      }
+
+      .nav-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(102, 126, 234, 0.5);
+      }
+
+      .nav-card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 8px;
+      }
+
+      .nav-card p {
+        font-size: 0.9rem;
+        opacity: 0.9;
+      }
+
+      .icon {
+        font-size: 2rem;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="hero">
+        <h1>James</h1>
+        <p class="subtitle">Welcome to my personal website</p>
+
+        <nav class="nav-grid">
+          <a href="/essays" class="nav-card">
+            <div class="icon">📝</div>
+            <h3>Essays</h3>
+            <p>Thoughts & writings</p>
+          </a>
+
+          <a href="/photography" class="nav-card">
+            <div class="icon">📸</div>
+            <h3>Photography</h3>
+            <p>Photos & videos</p>
+          </a>
+
+          <a href="/hobbies" class="nav-card">
+            <div class="icon">🎮</div>
+            <h3>Hobbies</h3>
+            <p>Sports & interests</p>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </body>
+</html>

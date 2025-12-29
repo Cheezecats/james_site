@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="James - Hobbies" />
+    <title>James - Hobbies</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+          sans-serif;
+        background: white;
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .header {
+        max-width: 900px;
+        margin: 0 auto 40px;
+      }
+
+      .back-link {
+        display: inline-block;
+        color: #667eea;
+        text-decoration: none;
+        font-size: 1rem;
+        margin-bottom: 20px;
+        opacity: 0.9;
+        transition: opacity 0.3s ease;
+      }
+
+      .back-link:hover {
+        opacity: 1;
+      }
+
+      .header h1 {
+        color: #333;
+        font-size: 2.5rem;
+      }
+
+      .content {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .section-title {
+        color: #333;
+        font-size: 1.8rem;
+        margin: 50px 0 40px;
+        font-weight: 600;
+      }
+
+      .timeline {
+        position: relative;
+        padding-left: 50px;
+      }
+
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 8px;
+        top: 10px;
+        bottom: -10px;
+        width: 2px;
+        background: #e0e0e0;
+      }
+
+      .sport-section {
+        position: relative;
+        margin-bottom: 50px;
+      }
+
+      .timeline-dot {
+        position: absolute;
+        left: -42px;
+        top: 5px;
+        width: 12px;
+        height: 12px;
+        background: black;
+        border-radius: 50%;
+        z-index: 1;
+      }
+
+      .sport-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .sport-title {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .sport-icon {
+        font-size: 2rem;
+      }
+
+      .sport-title h2 {
+        color: #333;
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+
+      .sport-year {
+        color: #667eea;
+        font-weight: 600;
+        font-size: 1rem;
+      }
+
+      .sport-description {
+        color: #555;
+        line-height: 1.7;
+        font-size: 1rem;
+        margin-bottom: 20px;
+      }
+
+      .sport-images {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+      }
+
+      .sport-img-placeholder {
+        aspect-ratio: 16 / 9;
+        background: #f0f0f0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #999;
+        font-size: 2rem;
+      }
+
+      .sport-img-placeholder img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .hobby-section {
+        margin-bottom: 40px;
+      }
+
+      .hobby-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 15px;
+      }
+
+      .hobby-icon {
+        font-size: 2rem;
+      }
+
+      .hobby-header h2 {
+        color: #333;
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+
+      .hobby-description {
+        color: #555;
+        line-height: 1.7;
+        font-size: 1rem;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #e0e0e0;
+        margin: 50px 0;
+      }
+
+      @media (max-width: 600px) {
+        .header h1 {
+          font-size: 2rem;
+        }
+
+        .section-title {
+          font-size: 1.5rem;
+        }
+
+        .sport-title h2,
+        .hobby-header h2 {
+          font-size: 1.3rem;
+        }
+
+        .timeline {
+          padding-left: 35px;
+        }
+
+        .timeline::before {
+          left: 5px;
+        }
+
+        .timeline-dot {
+          left: -30px;
+          width: 10px;
+          height: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <a href="/" class="back-link">← Back to Home</a>
+      <h1>Hobbies</h1>
+    </div>
+
+    <div class="content">
+      <h2 class="section-title">Sports Journey</h2>
+
+      <div class="timeline">
+        <section class="sport-section">
+          <div class="timeline-dot"></div>
+          <div class="sport-header">
+            <div class="sport-title">
+              <span class="sport-icon">🏒</span>
+              <h2>Ice Hockey</h2>
+            </div>
+            <span class="sport-year">Since [Year]</span>
+          </div>
+          <p class="sport-description">
+            My journey with ice hockey began at a young age. The speed, strategy, and teamwork
+            required in this sport have shaped my approach to challenges both on and off the ice.
+          </p>
+          <div class="sport-images">
+            <div class="sport-img-placeholder">📷</div>
+            <div class="sport-img-placeholder">📷</div>
+          </div>
+        </section>
+
+        <section class="sport-section">
+          <div class="timeline-dot"></div>
+          <div class="sport-header">
+            <div class="sport-title">
+              <span class="sport-icon">🎾</span>
+              <h2>Tennis</h2>
+            </div>
+            <span class="sport-year">Since [Year]</span>
+          </div>
+          <p class="sport-description">
+            Tennis taught me discipline and perseverance. The individual nature of the sport
+            pushes me to constantly improve and develop mental toughness.
+          </p>
+          <div class="sport-images">
+            <div class="sport-img-placeholder">📷</div>
+            <div class="sport-img-placeholder">📷</div>
+          </div>
+        </section>
+
+        <section class="sport-section">
+          <div class="timeline-dot"></div>
+          <div class="sport-header">
+            <div class="sport-title">
+              <span class="sport-icon">🏒</span>
+              <h2>Floorball</h2>
+            </div>
+            <span class="sport-year">Since [Year]</span>
+          </div>
+          <p class="sport-description">
+            Floorball brought a new dimension to my sports activities. The fast-paced nature and
+            technical skills required have been both challenging and rewarding.
+          </p>
+          <div class="sport-images">
+            <div class="sport-img-placeholder">📷</div>
+            <div class="sport-img-placeholder">📷</div>
+          </div>
+        </section>
+
+        <section class="sport-section">
+          <div class="timeline-dot"></div>
+          <div class="sport-header">
+            <div class="sport-title">
+              <span class="sport-icon">⛷️</span>
+              <h2>Skiing</h2>
+            </div>
+            <span class="sport-year">Since [Year]</span>
+          </div>
+          <p class="sport-description">
+            Gliding down snowy slopes offers freedom and adventure. Skiing has become a winter
+            passion that I look forward to every year.
+          </p>
+          <div class="sport-images">
+            <div class="sport-img-placeholder">📷</div>
+            <div class="sport-img-placeholder">📷</div>
+          </div>
+        </section>
+      </div>
+
+      <hr />
+
+      <h2 class="section-title">Other Hobbies</h2>
+
+      <section class="hobby-section">
+        <div class="hobby-header">
+          <span class="hobby-icon">🎮</span>
+          <h2>Gaming</h2>
+        </div>
+        <p class="hobby-description">
+          Video games have been a source of entertainment and relaxation. From strategy games to
+          RPGs, gaming offers diverse experiences and challenges.
+        </p>
+      </section>
+
+      <hr />
+
+      <section class="hobby-section">
+        <div class="hobby-header">
+          <span class="hobby-icon">🎸</span>
+          <h2>Electric Guitar</h2>
+        </div>
+        <p class="hobby-description">
+          Playing electric guitar allows me to express creativity through music. The process of
+          learning songs and improvising is incredibly rewarding.
+        </p>
+      </section>
+    </div>
+  </body>
+</html>
