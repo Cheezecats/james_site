@@ -59,8 +59,51 @@
         margin: 0 auto;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-auto-rows: calc((900px - 6px) / 4 * 0.75);
+        grid-auto-rows: calc((900px - 6px) / 4 / 1.36);
         gap: 2px;
+      }
+
+      /* Lightbox styles */
+      .lightbox {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        z-index: 1000;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .lightbox.active {
+        display: flex;
+        opacity: 1;
+      }
+
+      .lightbox img {
+        max-width: 95%;
+        max-height: 95%;
+        object-fit: contain;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+      }
+
+      .lightbox-close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        color: white;
+        font-size: 3rem;
+        cursor: pointer;
+        line-height: 1;
+        transition: transform 0.2s ease;
+      }
+
+      .lightbox-close:hover {
+        transform: scale(1.1);
       }
 
       .photo-card {
@@ -214,91 +257,138 @@
   <body>
     <div class="header">
       <a href="/" class="back-link">← Back to Home</a>
-      <h1>Photography & Videos</h1>
+      <h1>Photography Gallery</h1>
     </div>
 
-    <h2 class="section-title">Photo Gallery</h2>
     <div class="gallery">
-      <div class="photo-card large"><div class="photo-placeholder">📷 2x2</div></div>
-      <div class="photo-card"><div class="photo-placeholder">📷 1x1</div></div>
-      <div class="photo-card"><div class="photo-placeholder">📷 1x1</div></div>
-      <div class="photo-card wide"><div class="photo-placeholder">📷 2x1</div></div>
-      <div class="photo-card"><div class="photo-placeholder">📷 1x1</div></div>
-      <div class="photo-card tall"><div class="photo-placeholder">📷 1x2</div></div>
-      <div class="photo-card"><div class="photo-placeholder">📷 1x1</div></div>
-      <div class="photo-card"><div class="photo-placeholder">📷 1x1</div></div>
-      <div class="photo-card"><div class="photo-placeholder">📷 1x1</div></div>
-      <div class="photo-card wide"><div class="photo-placeholder">📷 2x1</div></div>
-      <div class="photo-card tall"><div class="photo-placeholder">📷 1x2</div></div>
-      <div class="photo-card"><div class="photo-placeholder">📷 1x1</div></div>
-      <div class="photo-card"><div class="photo-placeholder">📷 1x1</div></div>
-      <div class="photo-card"><div class="photo-placeholder">📷 1x1</div></div>
-      <div class="photo-card"><div class="photo-placeholder">📷 1x1</div></div>
-      <div class="photo-card wide"><div class="photo-placeholder">📷 2x1</div></div>
-      <div class="photo-card"><div class="photo-placeholder">📷 1x1</div></div>
-      <div class="photo-card"><div class="photo-placeholder">📷 1x1</div></div>
-      <div class="photo-card tall"><div class="photo-placeholder">📷 1x2</div></div>
-      <div class="photo-card"><div class="photo-placeholder">📷 1x1</div></div>
-    </div>
-
-    <h2 class="section-title">Videos</h2>
-    <div class="videos-section">
-      <div class="videos-grid">
-        <a href="https://youtube.com" target="_blank" class="video-card">
-          <div class="video-thumbnail">
-            <div class="play-button">▶</div>
-          </div>
-          <div class="video-info">
-            <h3>Video Title 1</h3>
-            <p>Video description goes here</p>
-            <span class="video-platform">YouTube</span>
-          </div>
-        </a>
-
-        <a href="https://youtube.com" target="_blank" class="video-card">
-          <div class="video-thumbnail">
-            <div class="play-button">▶</div>
-          </div>
-          <div class="video-info">
-            <h3>Video Title 2</h3>
-            <p>Video description goes here</p>
-            <span class="video-platform">YouTube</span>
-          </div>
-        </a>
-
-        <a href="https://youtube.com" target="_blank" class="video-card">
-          <div class="video-thumbnail">
-            <div class="play-button">▶</div>
-          </div>
-          <div class="video-info">
-            <h3>Video Title 3</h3>
-            <p>Video description goes here</p>
-            <span class="video-platform">YouTube</span>
-          </div>
-        </a>
-
-        <a href="https://youtube.com" target="_blank" class="video-card">
-          <div class="video-thumbnail">
-            <div class="play-button">▶</div>
-          </div>
-          <div class="video-info">
-            <h3>Video Title 4</h3>
-            <p>Video description goes here</p>
-            <span class="video-platform">YouTube</span>
-          </div>
-        </a>
-
-        <a href="https://youtube.com" target="_blank" class="video-card">
-          <div class="video-thumbnail">
-            <div class="play-button">▶</div>
-          </div>
-          <div class="video-info">
-            <h3>Video Title 5</h3>
-            <p>Video description goes here</p>
-            <span class="video-platform">YouTube</span>
-          </div>
-        </a>
+      <!-- Large featured images (2x2) -->
+      <div class="photo-card large" onclick="openLightbox(this)">
+        <img src="/assets/pictures/DSC_0187.jpg" alt="Photography" loading="lazy" />
+      </div>
+      <div class="photo-card" onclick="openLightbox(this)">
+        <img src="/assets/pictures/_T6A2660.JPG" alt="Photography" loading="lazy" />
+      </div>
+      <div class="photo-card" onclick="openLightbox(this)">
+        <img src="/assets/pictures/_T6A2724.jpg" alt="Photography" loading="lazy" />
+      </div>
+      <div class="photo-card tall" onclick="openLightbox(this)">
+        <img src="/assets/pictures/_T6A3351.jpg" alt="Photography" loading="lazy" />
+      </div>
+      <div class="photo-card" onclick="openLightbox(this)">
+        <img src="/assets/pictures/_T6A3526.jpg" alt="Photography" loading="lazy" />
+      </div>
+      <div class="photo-card tall" onclick="openLightbox(this)">
+        <img src="/assets/pictures/DSC_0348.jpg" alt="Photography" loading="lazy" />
+      </div>
+      <div class="photo-card" onclick="openLightbox(this)">
+        <img src="/assets/pictures/_T6A3542.jpg" alt="Photography" loading="lazy" />
+      </div>
+      <div class="photo-card" onclick="openLightbox(this)">
+        <img src="/assets/pictures/_T6A3720.jpg" alt="Photography" loading="lazy" />
+      </div>
+      <div class="photo-card" onclick="openLightbox(this)">
+        <img src="/assets/pictures/_T6A6000.jpg" alt="Photography" loading="lazy" />
+      </div>
+      <div class="photo-card tall" onclick="openLightbox(this)">
+        <img src="/assets/pictures/_T6A5346.jpg" alt="Photography" loading="lazy" />
+      </div>
+      <div class="photo-card tall" onclick="openLightbox(this)">
+        <img src="/assets/pictures/_T6A5411.jpg" alt="Photography" loading="lazy" />
+      </div>
+      <div class="photo-card" onclick="openLightbox(this)">
+        <img src="/assets/pictures/_T6A6182.jpg" alt="Photography" loading="lazy" />
+      </div>
+      <div class="photo-card" onclick="openLightbox(this)">
+        <img src="/assets/pictures/3T6A3836.jpg" alt="Photography" loading="lazy" />
+      </div>
+      <div class="photo-card tall" onclick="openLightbox(this)">
+        <img src="/assets/pictures/3T6A3960.jpg" alt="Photography" loading="lazy" />
+      </div>
+      <div class="photo-card" onclick="openLightbox(this)">
+        <img src="/assets/pictures/_T6A6134.jpg" alt="Photography" loading="lazy" />
+      </div>
+      <div class="photo-card" onclick="openLightbox(this)">
+        <img src="/assets/pictures/DSC_0046.jpg" alt="Photography" loading="lazy" />
+      </div>
+      <div class="photo-card tall" onclick="openLightbox(this)">
+        <img src="/assets/pictures/DSC_0438.jpg" alt="Photography" loading="lazy" />
+      </div>
+      <div class="photo-card" onclick="openLightbox(this)">
+        <img src="/assets/pictures/2-4jpn (1 - 37).jpg" alt="Photography" loading="lazy" />
+      </div>
+      <div class="photo-card tall" onclick="openLightbox(this)">
+        <img src="/assets/pictures/2-4jpn (2 - 37).jpg" alt="Photography" loading="lazy" />
+      </div>
+      <div class="photo-card" onclick="openLightbox(this)">
+        <img src="/assets/pictures/2-4jpn (3 - 37).jpg" alt="Photography" loading="lazy" />
+      </div>
+      <div class="photo-card" onclick="openLightbox(this)">
+        <img src="/assets/pictures/2-4jpn (16 - 37).jpg" alt="Photography" loading="lazy" />
+      </div>
+      <div class="photo-card tall" onclick="openLightbox(this)">
+        <img src="/assets/pictures/2-4jpn (17 - 37).jpg" alt="Photography" loading="lazy" />
+      </div>
+      <div class="photo-card" onclick="openLightbox(this)">
+        <img src="/assets/pictures/2-4jpn (25 - 37).jpg" alt="Photography" loading="lazy" />
+      </div>
+      <div class="photo-card tall" onclick="openLightbox(this)">
+        <img src="/assets/pictures/2-4jpn (26 - 37).jpg" alt="Photography" loading="lazy" />
+      </div>
+      <div class="photo-card" onclick="openLightbox(this)">
+        <img src="/assets/pictures/2-4jpn (29 - 37).jpg" alt="Photography" loading="lazy" />
+      </div>
+      <div class="photo-card" onclick="openLightbox(this)">
+        <img src="/assets/pictures/2-4jpn (35 - 37).jpg" alt="Photography" loading="lazy" />
+      </div>
+      <div class="photo-card tall" onclick="openLightbox(this)">
+        <img src="/assets/pictures/2-4jpn (7 - 37).jpg" alt="Photography" loading="lazy" />
+      </div>
+      <div class="photo-card tall" onclick="openLightbox(this)">
+        <img src="/assets/pictures/2-4jpn (8 - 37).jpg" alt="Photography" loading="lazy" />
+      </div>
+      <div class="photo-card tall" onclick="openLightbox(this)">
+        <img src="/assets/pictures/_T6A5313.jpg" alt="Photography" loading="lazy" />
+      </div>
+      <div class="photo-card tall" onclick="openLightbox(this)">
+        <img src="/assets/pictures/_T6A6070.jpg" alt="Photography" loading="lazy" />
+      </div>
+      <div class="photo-card tall" onclick="openLightbox(this)">
+        <img src="/assets/pictures/_T6A6328.jpg" alt="Photography" loading="lazy" />
+      </div>
+      <div class="photo-card large" onclick="openLightbox(this)">
+        <img src="/assets/pictures/DSC_0480.jpg" alt="Photography" loading="lazy" />
+      </div>
+      <div class="photo-card tall" onclick="openLightbox(this)">
+        <img src="/assets/pictures/IMG_7739.jpg" alt="Photography" loading="lazy" />
+      </div>
+      <div class="photo-card tall" onclick="openLightbox(this)">
+        <img src="/assets/pictures/IMG_8240.jpg" alt="Photography" loading="lazy" />
       </div>
     </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+      <span class="lightbox-close">&times;</span>
+      <img id="lightbox-img" src="" alt="Full-size photography" />
+    </div>
+
+    <script>
+      function openLightbox(element) {
+        const img = element.querySelector("img");
+        document.getElementById("lightbox-img").src = img.src;
+        document.getElementById("lightbox").classList.add("active");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeLightbox() {
+        document.getElementById("lightbox").classList.remove("active");
+        document.body.style.overflow = "auto";
+      }
+
+      // Close on Escape key
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeLightbox();
+      });
+    </script>
   </body>
 </html>

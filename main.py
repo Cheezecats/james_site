@@ -9,9 +9,9 @@ async def serve_scripts(filename: str):
     return FileResponse(f"scripts/{filename}")
 
 
-@app.get("/assets/{filename}")
+@app.get("/assets/pictures/{filename}")
 async def serve_assets(filename: str):
-    return FileResponse(f"assets/{filename}")
+    return FileResponse(f"assets/pictures/{filename}")
 
 
 @app.get("/styles/{filename}")
