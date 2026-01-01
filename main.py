@@ -34,6 +34,11 @@ async def serve_photography():
     return FileResponse("views/photography.html")
 
 
+@app.get("/videos")
+async def serve_videos():
+    return FileResponse("views/videos.html")
+
+
 @app.get("/hobbies")
 async def serve_hobbies():
     return FileResponse("views/hobbies.html")
