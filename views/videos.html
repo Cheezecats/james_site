@@ -1,34 +1,186 @@
-<body>
-  <iframe
-    width="400"
-    height="230"
-    src="https://www.youtube.com/embed/RUg2hiRTRVM"
-    title="Embed videos and playlists"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    referrerpolicy="strict-origin-when-cross-origin"
-    allowfullscreen
-  ></iframe>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="James - Videos" />
+    <title>James - Videos</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-  <iframe
-    width="400"
-    height="230"
-    src="https://www.youtube.com/embed/r7WEc5foYU8"
-    title="Embed videos and playlists"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    referrerpolicy="strict-origin-when-cross-origin"
-    allowfullscreen
-  ></iframe>
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+          sans-serif;
+        background: white;
+        min-height: 100vh;
+        padding: 20px;
+      }
 
-  <iframe
-    width="400"
-    height="230"
-    src="https://www.youtube.com/embed/myZ1VWSJMZw"
-    title="Embed videos and playlists"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    referrerpolicy="strict-origin-when-cross-origin"
-    allowfullscreen
-  ></iframe>
-</body>
+      .header {
+        max-width: 900px;
+        margin: 0 auto 40px;
+      }
+
+      .back-link {
+        display: inline-block;
+        color: #667eea;
+        text-decoration: none;
+        font-size: 1rem;
+        margin-bottom: 20px;
+        opacity: 0.9;
+        transition: opacity 0.3s ease;
+      }
+
+      .back-link:hover {
+        opacity: 1;
+      }
+
+      .header h1 {
+        color: #333;
+        font-size: 2.5rem;
+      }
+
+      .content {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .video-section {
+        margin-bottom: 60px;
+      }
+
+      .video-header {
+        margin-bottom: 20px;
+      }
+
+      .video-header h2 {
+        color: #333;
+        font-size: 1.8rem;
+        font-weight: 600;
+      }
+
+      .video-description {
+        color: #555;
+        line-height: 1.7;
+        font-size: 1rem;
+        margin-bottom: 25px;
+        max-width: 700px;
+      }
+
+      .video-wrapper {
+        position: relative;
+        width: 100%;
+        max-width: 720px;
+      }
+
+      .video-wrapper iframe {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        border: none;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #e0e0e0;
+        margin: 50px 0;
+      }
+
+      @media (max-width: 600px) {
+        .header h1 {
+          font-size: 2rem;
+        }
+
+        .video-header h2 {
+          font-size: 1.4rem;
+        }
+
+        .video-description {
+          font-size: 0.95rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <a href="/" class="back-link">← Back to Home</a>
+      <h1>Videos</h1>
+    </div>
+
+    <div class="content">
+      <section class="video-section">
+        <div class="video-header">
+          <h2>Introduction to Machine Learning</h2>
+        </div>
+        <p class="video-description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+          ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </p>
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/RUg2hiRTRVM"
+            title="Introduction to Machine Learning"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+
+      <hr />
+
+      <section class="video-section">
+        <div class="video-header">
+          <h2>Deep Learning Fundamentals</h2>
+        </div>
+        <p class="video-description">
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+          anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+          veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+        </p>
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/r7WEc5foYU8"
+            title="Deep Learning Fundamentals"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+
+      <hr />
+
+      <section class="video-section">
+        <div class="video-header">
+          <h2>Neural Network Architectures</h2>
+        </div>
+        <p class="video-description">
+          Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+          consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro
+          quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed
+          quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
+          voluptatem.
+        </p>
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/myZ1VWSJMZw"
+            title="Neural Network Architectures"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
