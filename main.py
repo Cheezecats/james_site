@@ -14,6 +14,11 @@ async def serve_assets(filename: str):
     return FileResponse(f"assets/pictures/{filename}")
 
 
+@app.get("/assets/pdf/{filename}")
+async def serve_pdf(filename: str):
+    return FileResponse(f"assets/pdf/{filename}")
+
+
 @app.get("/assets/thumbnails/{filename}")
 async def serve_thumbnails(filename: str):
     return FileResponse(f"assets/thumbnails/{filename}")

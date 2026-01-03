@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -13,9 +13,8 @@
       }
 
       body {
-        font-family:
-          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
-          sans-serif;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, sans-serif;
         background: white;
         min-height: 100vh;
         padding: 20px;
@@ -85,9 +84,9 @@
       .essay-description {
         color: #555;
         line-height: 1.7;
-        font-size: 1rem;
+        font-size: 1.2rem;
         margin-bottom: 25px;
-        max-width: 700px;
+        max-width: 100%;
       }
 
       .essay-images {
@@ -142,18 +141,45 @@
     <div class="content">
       <section class="essay-section">
         <div class="essay-header">
-          <h2>LLM Hallucinations</h2>
-          <a href="essay1.pdf" class="pdf-link" title="Download PDF">📄</a>
+          <h2>
+            <a href="/assets/pdf/essay llm.pdf"
+              >Hallucinations in Large Language Models</a
+            >
+          </h2>
+          <a
+            href="/assets/pdf/essay llm.pdf"
+            class="pdf-link"
+            title="Download PDF"
+            >📄</a
+          >
         </div>
         <p class="essay-description">
-          An exploration of Large Language Model hallucinations - why they occur, their implications,
-          and potential mitigation strategies. This essay examines the fundamental causes of
-          hallucination in transformer architectures and discusses current research directions aimed
-          at improving factual reliability in AI systems.
+          This study investigates hallucinations in large language models,
+          examining why they occur and how they relate to model size. Using
+          Gemma-3 models and the SimpleQA benchmark, it shows that scaling
+          parameters alone is insufficient, highlighting the need for
+          architectural improvements and stronger mitigation strategies.
         </p>
-        <div class="essay-images">
-          <div class="essay-img-placeholder">📷 Image placeholder</div>
-          <div class="essay-img-placeholder">📷 Image placeholder</div>
+        <div
+          class="essay-images"
+          style="
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+          "
+        >
+          <img
+            style="width: 70%; display: block"
+            src="/assets/pdf/table_his.png"
+            alt="Image placeholder"
+          />
+          <img
+            style="width: 70%; display: block"
+            src="/assets/pdf/table_his2.png"
+            alt="Image placeholder"
+          />
         </div>
       </section>
 
@@ -161,18 +187,46 @@
 
       <section class="essay-section">
         <div class="essay-header">
-          <h2>Model Architecture</h2>
-          <a href="essay2.pdf" class="pdf-link" title="Download PDF">📄</a>
+          <h2>
+            <a href="/assets/pdf/essay his.pdf"
+              >Benchmarking Neural Classifiers for Medical Imaging</a
+            >
+          </h2>
+          <a
+            href="/assets/pdf/essay his.pdf"
+            class="pdf-link"
+            title="Download PDF"
+            >📄</a
+          >
         </div>
         <p class="essay-description">
-          A deep dive into modern model architectures, their evolution, and the design principles
-          that drive their performance. From early transformer designs to state-of-the-art
-          architectures, this essay traces the key innovations that have shaped modern AI systems.
+          This paper benchmarks multiple classifier architectures for medical
+          image classification using histology embeddings. Comparing attention
+          pooling, KNN, and MLP models, it evaluates accuracy, efficiency, and
+          robustness. Results show attention pooling performs best overall,
+          while simpler models remain competitive, informing practical
+          deployment in healthcare settings.
         </p>
-        <div class="essay-images">
-          <div class="essay-img-placeholder">📷 Image placeholder</div>
-          <div class="essay-img-placeholder">📷 Image placeholder</div>
-          <div class="essay-img-placeholder">📷 Image placeholder</div>
+        <div
+          class="essay-images"
+          style="
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+          "
+        >
+          <img
+            style="width: 70%; display: block"
+            src="/assets/pdf/performance.png"
+            alt="Image placeholder"
+          />
+          <img
+            style="width: 50%; display: block"
+            src="/assets/pdf/topics.png"
+            alt="Image placeholder"
+          />
         </div>
       </section>
     </div>

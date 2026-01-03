@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -9,13 +9,13 @@
       * {
         margin: 0;
         padding: 0;
+        user-select: none;
         box-sizing: border-box;
       }
 
       body {
-        font-family:
-          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
-          sans-serif;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, sans-serif;
         background: #f5f5f5;
         min-height: 100vh;
         padding: 20px;
@@ -110,9 +110,7 @@
         position: relative;
         overflow: hidden;
         cursor: pointer;
-        transition:
-          box-shadow 0.3s ease,
-          transform 0.3s ease;
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
       }
 
       .photo-card:hover {
@@ -132,6 +130,18 @@
       .photo-card.large {
         grid-column: span 2;
         grid-row: span 2;
+      }
+
+      /* tall-xl: make a vertical card stand out as 2 columns × 4 rows (2x4) */
+      .photo-card.tall-xl {
+        grid-column: span 2;
+        grid-row: span 4;
+      }
+
+      /* extra-large featured card (spans more columns and rows) */
+      .photo-card.large-lg {
+        grid-column: span 3;
+        grid-row: span 3;
       }
 
       .photo-card img {
@@ -166,9 +176,7 @@
         border-radius: 15px;
         overflow: hidden;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        transition:
-          transform 0.3s ease,
-          box-shadow 0.3s ease;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
         text-decoration: none;
         color: inherit;
       }
@@ -247,8 +255,10 @@
 
         .photo-card.wide,
         .photo-card.tall,
-        .photo-card.large {
-          grid-column: span 1;
+        .photo-card.large,
+        .photo-card.tall-lg,
+        .photo-card.large-lg,
+        .photo-card.tall-xl {
           grid-row: span 1;
         }
       }
@@ -263,106 +273,276 @@
     <div class="gallery">
       <!-- Large featured images (2x2) -->
       <div class="photo-card large" onclick="openLightbox(this)">
-        <img src="/assets/thumbnails/DSC_0187.jpg" data-fullsrc="/assets/pictures/DSC_0187.jpg" alt="Photography" loading="lazy" />
+        <img
+          src="/assets/thumbnails/3T6A3836.jpg"
+          data-fullsrc="/assets/pictures/3T6A3836.jpg"
+          alt="Photography"
+          loading="lazy"
+        />
       </div>
       <div class="photo-card" onclick="openLightbox(this)">
-        <img src="/assets/thumbnails/_T6A2660.jpg" data-fullsrc="/assets/pictures/_T6A2660.JPG" alt="Photography" loading="lazy" />
+        <img
+          src="/assets/thumbnails/_T6A2660.jpg"
+          data-fullsrc="/assets/pictures/_T6A2660.JPG"
+          alt="Photography"
+          loading="lazy"
+        />
       </div>
       <div class="photo-card" onclick="openLightbox(this)">
-        <img src="/assets/thumbnails/_T6A2724.jpg" data-fullsrc="/assets/pictures/_T6A2724.jpg" alt="Photography" loading="lazy" />
+        <img
+          src="/assets/thumbnails/_T6A2724.jpg"
+          data-fullsrc="/assets/pictures/_T6A2724.jpg"
+          alt="Photography"
+          loading="lazy"
+        />
       </div>
       <div class="photo-card tall" onclick="openLightbox(this)">
-        <img src="/assets/thumbnails/_T6A3351.jpg" data-fullsrc="/assets/pictures/_T6A3351.jpg" alt="Photography" loading="lazy" />
+        <img
+          src="/assets/thumbnails/_T6A3351.jpg"
+          data-fullsrc="/assets/pictures/_T6A3351.jpg"
+          alt="Photography"
+          loading="lazy"
+        />
       </div>
       <div class="photo-card" onclick="openLightbox(this)">
-        <img src="/assets/thumbnails/_T6A3526.jpg" data-fullsrc="/assets/pictures/_T6A3526.jpg" alt="Photography" loading="lazy" />
+        <img
+          src="/assets/thumbnails/_T6A3526.jpg"
+          data-fullsrc="/assets/pictures/_T6A3526.jpg"
+          alt="Photography"
+          loading="lazy"
+        />
       </div>
       <div class="photo-card tall" onclick="openLightbox(this)">
-        <img src="/assets/thumbnails/DSC_0348.jpg" data-fullsrc="/assets/pictures/DSC_0348.jpg" alt="Photography" loading="lazy" />
+        <img
+          src="/assets/thumbnails/DSC_0348.jpg"
+          data-fullsrc="/assets/pictures/DSC_0348.jpg"
+          alt="Photography"
+          loading="lazy"
+        />
       </div>
       <div class="photo-card" onclick="openLightbox(this)">
-        <img src="/assets/thumbnails/_T6A3542.jpg" data-fullsrc="/assets/pictures/_T6A3542.jpg" alt="Photography" loading="lazy" />
+        <img
+          src="/assets/thumbnails/_T6A3542.jpg"
+          data-fullsrc="/assets/pictures/_T6A3542.jpg"
+          alt="Photography"
+          loading="lazy"
+        />
       </div>
       <div class="photo-card" onclick="openLightbox(this)">
-        <img src="/assets/thumbnails/_T6A3720.jpg" data-fullsrc="/assets/pictures/_T6A3720.jpg" alt="Photography" loading="lazy" />
+        <img
+          src="/assets/thumbnails/_T6A3720.jpg"
+          data-fullsrc="/assets/pictures/_T6A3720.jpg"
+          alt="Photography"
+          loading="lazy"
+        />
       </div>
       <div class="photo-card" onclick="openLightbox(this)">
-        <img src="/assets/thumbnails/_T6A6000.jpg" data-fullsrc="/assets/pictures/_T6A6000.jpg" alt="Photography" loading="lazy" />
+        <img
+          src="/assets/thumbnails/_T6A6000.jpg"
+          data-fullsrc="/assets/pictures/_T6A6000.jpg"
+          alt="Photography"
+          loading="lazy"
+        />
       </div>
       <div class="photo-card tall" onclick="openLightbox(this)">
-        <img src="/assets/thumbnails/_T6A5346.jpg" data-fullsrc="/assets/pictures/_T6A5346.jpg" alt="Photography" loading="lazy" />
+        <img
+          src="/assets/thumbnails/_T6A5346.jpg"
+          data-fullsrc="/assets/pictures/_T6A5346.jpg"
+          alt="Photography"
+          loading="lazy"
+        />
       </div>
       <div class="photo-card tall" onclick="openLightbox(this)">
-        <img src="/assets/thumbnails/_T6A5411.jpg" data-fullsrc="/assets/pictures/_T6A5411.jpg" alt="Photography" loading="lazy" />
+        <img
+          src="/assets/thumbnails/_T6A5411.jpg"
+          data-fullsrc="/assets/pictures/_T6A5411.jpg"
+          alt="Photography"
+          loading="lazy"
+        />
       </div>
       <div class="photo-card" onclick="openLightbox(this)">
-        <img src="/assets/thumbnails/_T6A6182.jpg" data-fullsrc="/assets/pictures/_T6A6182.jpg" alt="Photography" loading="lazy" />
+        <img
+          src="/assets/thumbnails/_T6A6182.jpg"
+          data-fullsrc="/assets/pictures/_T6A6182.jpg"
+          alt="Photography"
+          loading="lazy"
+        />
       </div>
       <div class="photo-card" onclick="openLightbox(this)">
-        <img src="/assets/thumbnails/3T6A3836.jpg" data-fullsrc="/assets/pictures/3T6A3836.jpg" alt="Photography" loading="lazy" />
+        <img
+          src="/assets/thumbnails/DSC_0187.jpg"
+          data-fullsrc="/assets/pictures/DSC_0187.jpg"
+          alt="Photography"
+          loading="lazy"
+        />
       </div>
       <div class="photo-card tall" onclick="openLightbox(this)">
-        <img src="/assets/thumbnails/3T6A3960.jpg" data-fullsrc="/assets/pictures/3T6A3960.jpg" alt="Photography" loading="lazy" />
+        <img
+          src="/assets/thumbnails/3T6A3960.jpg"
+          data-fullsrc="/assets/pictures/3T6A3960.jpg"
+          alt="Photography"
+          loading="lazy"
+        />
       </div>
       <div class="photo-card" onclick="openLightbox(this)">
-        <img src="/assets/thumbnails/_T6A6134.jpg" data-fullsrc="/assets/pictures/_T6A6134.jpg" alt="Photography" loading="lazy" />
+        <img
+          src="/assets/thumbnails/_T6A6134.jpg"
+          data-fullsrc="/assets/pictures/_T6A6134.jpg"
+          alt="Photography"
+          loading="lazy"
+        />
       </div>
       <div class="photo-card" onclick="openLightbox(this)">
-        <img src="/assets/thumbnails/DSC_0046.jpg" data-fullsrc="/assets/pictures/DSC_0046.jpg" alt="Photography" loading="lazy" />
+        <img
+          src="/assets/thumbnails/DSC_0046.jpg"
+          data-fullsrc="/assets/pictures/DSC_0046.jpg"
+          alt="Photography"
+          loading="lazy"
+        />
       </div>
       <div class="photo-card tall" onclick="openLightbox(this)">
-        <img src="/assets/thumbnails/DSC_0438.jpg" data-fullsrc="/assets/pictures/DSC_0438.jpg" alt="Photography" loading="lazy" />
+        <img
+          src="/assets/thumbnails/DSC_0438.jpg"
+          data-fullsrc="/assets/pictures/DSC_0438.jpg"
+          alt="Photography"
+          loading="lazy"
+        />
       </div>
       <div class="photo-card" onclick="openLightbox(this)">
-        <img src="/assets/thumbnails/2-4jpn (1 - 37).jpg" data-fullsrc="/assets/pictures/2-4jpn (1 - 37).jpg" alt="Photography" loading="lazy" />
+        <img
+          src="/assets/thumbnails/2-4jpn (1 - 37).jpg"
+          data-fullsrc="/assets/pictures/2-4jpn (1 - 37).jpg"
+          alt="Photography"
+          loading="lazy"
+        />
       </div>
       <div class="photo-card tall" onclick="openLightbox(this)">
-        <img src="/assets/thumbnails/2-4jpn (2 - 37).jpg" data-fullsrc="/assets/pictures/2-4jpn (2 - 37).jpg" alt="Photography" loading="lazy" />
+        <img
+          src="/assets/thumbnails/2-4jpn (2 - 37).jpg"
+          data-fullsrc="/assets/pictures/2-4jpn (2 - 37).jpg"
+          alt="Photography"
+          loading="lazy"
+        />
       </div>
       <div class="photo-card" onclick="openLightbox(this)">
-        <img src="/assets/thumbnails/2-4jpn (3 - 37).jpg" data-fullsrc="/assets/pictures/2-4jpn (3 - 37).jpg" alt="Photography" loading="lazy" />
+        <img
+          src="/assets/thumbnails/2-4jpn (3 - 37).jpg"
+          data-fullsrc="/assets/pictures/2-4jpn (3 - 37).jpg"
+          alt="Photography"
+          loading="lazy"
+        />
       </div>
       <div class="photo-card" onclick="openLightbox(this)">
-        <img src="/assets/thumbnails/2-4jpn (16 - 37).jpg" data-fullsrc="/assets/pictures/2-4jpn (16 - 37).jpg" alt="Photography" loading="lazy" />
+        <img
+          src="/assets/thumbnails/2-4jpn (16 - 37).jpg"
+          data-fullsrc="/assets/pictures/2-4jpn (16 - 37).jpg"
+          alt="Photography"
+          loading="lazy"
+        />
       </div>
-      <div class="photo-card tall" onclick="openLightbox(this)">
-        <img src="/assets/thumbnails/2-4jpn (17 - 37).jpg" data-fullsrc="/assets/pictures/2-4jpn (17 - 37).jpg" alt="Photography" loading="lazy" />
+      <div class="photo-card tall tall-xl" onclick="openLightbox(this)">
+        <img
+          src="/assets/thumbnails/2-4jpn (17 - 37).jpg"
+          data-fullsrc="/assets/pictures/2-4jpn (17 - 37).jpg"
+          alt="Photography"
+          loading="lazy"
+        />
       </div>
       <div class="photo-card" onclick="openLightbox(this)">
-        <img src="/assets/thumbnails/2-4jpn (25 - 37).jpg" data-fullsrc="/assets/pictures/2-4jpn (25 - 37).jpg" alt="Photography" loading="lazy" />
+        <img
+          src="/assets/thumbnails/2-4jpn (25 - 37).jpg"
+          data-fullsrc="/assets/pictures/2-4jpn (25 - 37).jpg"
+          alt="Photography"
+          loading="lazy"
+        />
       </div>
       <div class="photo-card tall" onclick="openLightbox(this)">
-        <img src="/assets/thumbnails/2-4jpn (26 - 37).jpg" data-fullsrc="/assets/pictures/2-4jpn (26 - 37).jpg" alt="Photography" loading="lazy" />
+        <img
+          src="/assets/thumbnails/2-4jpn (26 - 37).jpg"
+          data-fullsrc="/assets/pictures/2-4jpn (26 - 37).jpg"
+          alt="Photography"
+          loading="lazy"
+        />
       </div>
       <div class="photo-card" onclick="openLightbox(this)">
-        <img src="/assets/thumbnails/2-4jpn (29 - 37).jpg" data-fullsrc="/assets/pictures/2-4jpn (29 - 37).jpg" alt="Photography" loading="lazy" />
+        <img
+          src="/assets/thumbnails/2-4jpn (29 - 37).jpg"
+          data-fullsrc="/assets/pictures/2-4jpn (29 - 37).jpg"
+          alt="Photography"
+          loading="lazy"
+        />
       </div>
       <div class="photo-card" onclick="openLightbox(this)">
-        <img src="/assets/thumbnails/2-4jpn (35 - 37).jpg" data-fullsrc="/assets/pictures/2-4jpn (35 - 37).jpg" alt="Photography" loading="lazy" />
+        <img
+          src="/assets/thumbnails/2-4jpn (35 - 37).jpg"
+          data-fullsrc="/assets/pictures/2-4jpn (35 - 37).jpg"
+          alt="Photography"
+          loading="lazy"
+        />
       </div>
       <div class="photo-card tall" onclick="openLightbox(this)">
-        <img src="/assets/thumbnails/2-4jpn (7 - 37).jpg" data-fullsrc="/assets/pictures/2-4jpn (7 - 37).jpg" alt="Photography" loading="lazy" />
+        <img
+          src="/assets/thumbnails/2-4jpn (7 - 37).jpg"
+          data-fullsrc="/assets/pictures/2-4jpn (7 - 37).jpg"
+          alt="Photography"
+          loading="lazy"
+        />
       </div>
       <div class="photo-card tall" onclick="openLightbox(this)">
-        <img src="/assets/thumbnails/2-4jpn (8 - 37).jpg" data-fullsrc="/assets/pictures/2-4jpn (8 - 37).jpg" alt="Photography" loading="lazy" />
+        <img
+          src="/assets/thumbnails/2-4jpn (8 - 37).jpg"
+          data-fullsrc="/assets/pictures/2-4jpn (8 - 37).jpg"
+          alt="Photography"
+          loading="lazy"
+        />
       </div>
       <div class="photo-card tall" onclick="openLightbox(this)">
-        <img src="/assets/thumbnails/_T6A5313.jpg" data-fullsrc="/assets/pictures/_T6A5313.jpg" alt="Photography" loading="lazy" />
+        <img
+          src="/assets/thumbnails/_T6A5313.jpg"
+          data-fullsrc="/assets/pictures/_T6A5313.jpg"
+          alt="Photography"
+          loading="lazy"
+        />
       </div>
       <div class="photo-card tall" onclick="openLightbox(this)">
-        <img src="/assets/thumbnails/_T6A6070.jpg" data-fullsrc="/assets/pictures/_T6A6070.jpg" alt="Photography" loading="lazy" />
+        <img
+          src="/assets/thumbnails/_T6A6070.jpg"
+          data-fullsrc="/assets/pictures/_T6A6070.jpg"
+          alt="Photography"
+          loading="lazy"
+        />
       </div>
       <div class="photo-card tall" onclick="openLightbox(this)">
-        <img src="/assets/thumbnails/_T6A6328.jpg" data-fullsrc="/assets/pictures/_T6A6328.jpg" alt="Photography" loading="lazy" />
+        <img
+          src="/assets/thumbnails/_T6A6328.jpg"
+          data-fullsrc="/assets/pictures/_T6A6328.jpg"
+          alt="Photography"
+          loading="lazy"
+        />
       </div>
-      <div class="photo-card large" onclick="openLightbox(this)">
-        <img src="/assets/thumbnails/DSC_0480.jpg" data-fullsrc="/assets/pictures/DSC_0480.jpg" alt="Photography" loading="lazy" />
+      <div class="photo-card tall tall-xl" onclick="openLightbox(this)">
+        <img
+          src="/assets/thumbnails/DSC_0480.jpg"
+          data-fullsrc="/assets/pictures/DSC_0480.jpg"
+          alt="Photography"
+          loading="lazy"
+        />
       </div>
       <div class="photo-card tall" onclick="openLightbox(this)">
-        <img src="/assets/thumbnails/IMG_7739.jpg" data-fullsrc="/assets/pictures/IMG_7739.jpg" alt="Photography" loading="lazy" />
+        <img
+          src="/assets/thumbnails/IMG_7739.jpg"
+          data-fullsrc="/assets/pictures/IMG_7739.jpg"
+          alt="Photography"
+          loading="lazy"
+        />
       </div>
       <div class="photo-card tall" onclick="openLightbox(this)">
-        <img src="/assets/thumbnails/IMG_8240.jpg" data-fullsrc="/assets/pictures/IMG_8240.jpg" alt="Photography" loading="lazy" />
+        <img
+          src="/assets/thumbnails/IMG_8240.jpg"
+          data-fullsrc="/assets/pictures/IMG_8240.jpg"
+          alt="Photography"
+          loading="lazy"
+        />
       </div>
     </div>
 
